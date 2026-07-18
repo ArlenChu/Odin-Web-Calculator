@@ -102,4 +102,63 @@ btn5.onclick = () => {
     display.textContent = displaystring
 }
 
+const btn4 = document.querySelector("#4")
+btn4.onclick = () => {
+    if (oprand1 == -1) {
+        oprand1 = 4
+        displaystring += '4'
+    } else if (oprand2 == -1) {
+        oprand2 = 4
+        displaystring += '4'
+    }
+    display.textContent = displaystring
+}
+
+const btn3 = document.querySelector("#3")
+btn3.onclick = () => {
+    if (oprand1 == -1) {
+        oprand1 = 3
+        displaystring += '3'
+    } else if (oprand2 == -1) {
+        oprand2 = 3
+        displaystring += '3'
+    }
+    display.textContent = displaystring
+}
+
+const btn2 = document.querySelector("#2")
+btn2.onclick = () => {
+    if (oprand1 == -1) {
+        oprand1 = 2
+        displaystring += '2'
+    } else if (oprand2 == -1) {
+        oprand2 = 2
+        displaystring += '2'
+    }
+    display.textContent = displaystring
+}
+
+const btn1 = document.querySelector("#1")
+btn1.onclick = () => {
+    if (oprand1 == -1) {
+        oprand1 = 1
+        displaystring += '1'
+    } else if (oprand2 == -1) {
+        oprand2 = 1
+        displaystring += '1'
+    }
+    display.textContent = displaystring
+}
+
+const btn0 = document.querySelector("#0")
+btn0.onclick = () => {
+    if (oprand1 == -1) {
+        oprand1 = 0
+        displaystring += '0'
+    } else if (oprand2 == -1) {
+        oprand2 = 0
+        displaystring += '0'
+    }
+    display.textContent = displaystring
+}
 
