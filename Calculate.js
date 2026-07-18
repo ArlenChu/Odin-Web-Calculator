@@ -24,7 +24,7 @@ function operate(oprand1, oprand2, operator) {
     } else if (operator == "-") {
         return subtract(oprand1, oprand2)
     } else if (operator == "*") {
-        return mulitply(oprand1, oprand2)
+        return multiply(oprand1, oprand2)
     } else if (operator == "/") {
         return divide(oprand1, oprand2)
     }
@@ -42,7 +42,7 @@ btnClear.onclick = () => {
     display.textContent = displaystring
 }
 
-const btn9 = document.querySelector("#9")
+const btn9 = document.querySelector("#btn9")
 btn9.onclick = () => {
     if (oprand1 == -1) {
         oprand1 = 9
@@ -54,7 +54,7 @@ btn9.onclick = () => {
     display.textContent = displaystring
 }
 
-const btn8 = document.querySelector("#8")
+const btn8 = document.querySelector("#btn8")
 btn8.onclick = () => {
     if (oprand1 == -1) {
         oprand1 = 8
@@ -66,7 +66,7 @@ btn8.onclick = () => {
     display.textContent = displaystring
 }
 
-const btn7 = document.querySelector("#7")
+const btn7 = document.querySelector("#btn7")
 btn7.onclick = () => {
     if (oprand1 == -1) {
         oprand1 = 7
@@ -78,7 +78,7 @@ btn7.onclick = () => {
     display.textContent = displaystring
 }
 
-const btn6 = document.querySelector("#6")
+const btn6 = document.querySelector("#btn6")
 btn6.onclick = () => {
     if (oprand1 == -1) {
         oprand1 = 6
@@ -90,7 +90,7 @@ btn6.onclick = () => {
     display.textContent = displaystring
 }
 
-const btn5 = document.querySelector("#5")
+const btn5 = document.querySelector("#btn5")
 btn5.onclick = () => {
     if (oprand1 == -1) {
         oprand1 = 5
@@ -102,7 +102,7 @@ btn5.onclick = () => {
     display.textContent = displaystring
 }
 
-const btn4 = document.querySelector("#4")
+const btn4 = document.querySelector("#btn4")
 btn4.onclick = () => {
     if (oprand1 == -1) {
         oprand1 = 4
@@ -114,7 +114,7 @@ btn4.onclick = () => {
     display.textContent = displaystring
 }
 
-const btn3 = document.querySelector("#3")
+const btn3 = document.querySelector("#btn3")
 btn3.onclick = () => {
     if (oprand1 == -1) {
         oprand1 = 3
@@ -126,7 +126,7 @@ btn3.onclick = () => {
     display.textContent = displaystring
 }
 
-const btn2 = document.querySelector("#2")
+const btn2 = document.querySelector("#btn2")
 btn2.onclick = () => {
     if (oprand1 == -1) {
         oprand1 = 2
@@ -138,7 +138,7 @@ btn2.onclick = () => {
     display.textContent = displaystring
 }
 
-const btn1 = document.querySelector("#1")
+const btn1 = document.querySelector("#btn1")
 btn1.onclick = () => {
     if (oprand1 == -1) {
         oprand1 = 1
@@ -150,7 +150,7 @@ btn1.onclick = () => {
     display.textContent = displaystring
 }
 
-const btn0 = document.querySelector("#0")
+const btn0 = document.querySelector("#btn0")
 btn0.onclick = () => {
     if (oprand1 == -1) {
         oprand1 = 0
@@ -162,3 +162,47 @@ btn0.onclick = () => {
     display.textContent = displaystring
 }
 
+const btnplus = document.querySelector("#plus")
+btnplus.onclick = () => {
+    if (operator == "undefined") {
+        operator = "+"
+        displaystring += '+'
+    }
+    display.textContent = displaystring
+}
+
+const btnsubtract = document.querySelector("#subtract")
+btnsubtract.onclick = () => {
+    if (operator  == "undefined") {
+        operator = "-"
+        displaystring += '-'
+    }
+    display.textContent = displaystring
+}
+
+const btntimes = document.querySelector("#multiply")
+btntimes.onclick = () => {
+    if (operator  == "undefined") {
+        operator = "*"
+        displaystring += 'x'
+    }
+    display.textContent = displaystring
+}
+
+const btndivide = document.querySelector("#divide")
+btndivide.onclick = () => {
+    if (operator  == "undefined") {
+        operator = "/"
+        displaystring += '÷'
+    }
+    display.textContent = displaystring
+}
+
+const btnequal = document.querySelector("#equal")
+btnequal.onclick = () => {
+    display.textContent = String(operate(oprand1, oprand2 , operator))
+    oprand1 = -1;
+    oprand2 = -1;
+    operator = "undefined";
+    displaystring = ""
+}
