@@ -169,7 +169,10 @@ btnplus.onclick = () => {
     if (operator == "undefined") {
         if (operatorPress) {
             if (oprand2 != "") {
+                oprand1 = parseInt(oprand1,10)
+                oprand2 = parseInt(oprand2, 10)
                 oprand1 = operate(oprand1, oprand2, operator)
+                oprand2 = ""
             }
         }
         operator = "+"
@@ -184,7 +187,10 @@ btnsubtract.onclick = () => {
     if (operator  == "undefined") {
         if (operatorPress) {
             if (oprand2 != "") {
+                oprand1 = parseInt(oprand1,10)
+                oprand2 = parseInt(oprand2, 10)
                 oprand1 = operate(oprand1, oprand2, operator)
+                oprand2 = ""
             }
         }
         operator = "-"
@@ -199,7 +205,10 @@ btntimes.onclick = () => {
     if (operator  == "undefined") {
         if (operatorPress) {
             if (oprand2 != "") {
+                oprand1 = parseInt(oprand1,10)
+                oprand2 = parseInt(oprand2, 10)
                 oprand1 = operate(oprand1, oprand2, operator)
+                oprand2 = ""
             }
         }
         operator = "*"
@@ -214,7 +223,10 @@ btndivide.onclick = () => {
     if (operator  == "undefined") {
         if (operatorPress) {
             if (oprand2 != "") {
+                oprand1 = parseInt(oprand1,10)
+                oprand2 = parseInt(oprand2, 10)
                 oprand1 = operate(oprand1, oprand2, operator)
+                oprand2 = ""
             }
         }
         operator = "/"
